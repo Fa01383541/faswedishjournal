@@ -1,4 +1,6 @@
 //import React from "react";
+import './CurrencyEx.css'
+
 
 function CurrencyEx(){
     return (
