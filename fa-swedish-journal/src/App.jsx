@@ -2,6 +2,7 @@
 import './App.css'
 import React from 'react';
 import  Navbar from './Navbar';
+import Home from './Home';
 import Blog from './Blog';
 import Video from './Video';
 import CurrencyEx from './CurrencyEx'
