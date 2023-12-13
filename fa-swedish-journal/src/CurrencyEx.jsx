@@ -20,12 +20,11 @@ function CurrencyEx()
         fetch(BASE_URL)
         .then(res =>res.json())
         .then(data=>{
-            const firstcurrency = Object.keys(data.rates)[0]
             const uniqueCurrency= Array.from(new Set([data.base_code, ...Object.keys(data.rates)]));
-            setCurrencyOptions([data.base_code, ...Object.keys(data.rates)])
-            setFromCurrency(data.base_code)
-            setToCurrency(firstcurrency)
-            setExchangeRate(data.rates[firstcurrency])
+            setCurrencyOptions(uniqueCurrency);
+            setFromCurrency('SEK');
+            setToCurrency('MXN');
+            setExchangeRate(data.rates['MXN']);
         });
     },[]);
 
