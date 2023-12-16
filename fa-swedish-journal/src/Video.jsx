@@ -1,20 +1,21 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React ,{useState}from "react";
 import YouTube from 'react-youtube';
 import './Video.css'
 
 function Video(){
+    const[activeCategory,setActiveCategory]=useState(null)
     return (
     <>
+        <h2 className='title'>Videos</h2>
     <div className="allw">
-        <h2 className='title'>Video</h2>
-        <div className="largevidw">
-        <h3 className="largevidtitle">Videos Largos</h3>
-        <LongVideos />
+        <div className="vid-categ">
+        <h3 className="largevidtitle" onClick={()=>setActiveCategory('long')}>Videos Largos</h3>
+        <h3 className="shortvidtitle" onClick={()=>setActiveCategory('short')}>Videos Cortos</h3>
         </div>
-        <div className="shortvidw">
-            <h3 className="shortvidtitle">Videos Cortos</h3>
-            <ShortVideos />
+        <div className="videogrid">
+        {activeCategory === 'long' && <LongVideos/>}
+        {activeCategory === 'short' && <ShortVideos/>}
         </div>
     </div>
     </>
@@ -22,9 +23,9 @@ function Video(){
 }
 
 function LongVideos(){
-    const videoIds = ['R_YNKPKblG4'];
+    const videoIds = ['R_YNKPKblG4','mt_72rArhao','vanqII4l3lo','N5he-mxIsEI'];
    return (
-    <div>
+    <div className="videogrid">
       {videoIds.map(id => (
         <YouTube key={id}videoId={id} className="longvideos"/>
       ))}
@@ -36,7 +37,7 @@ function ShortVideos() {
   const videoIds = ['L2INejsCW3w'];
 
   return (
-    <div>
+    <div className="videogrid">
       {videoIds.map(id => (
         <YouTube key={id}videoId={id} className="shortvideos"/>
       ))}
