@@ -53,7 +53,7 @@ function CurrencyEx()
     return (
     <>
     <div className="bodywrapp">
-    <h2 className="title">Taza de Cambio</h2>
+    <h2 className="title">Tasa de Cambio</h2>
     <div className="exchangewrapp">
     <CurrencyRow
         currencyOptions={currencyOptions}
