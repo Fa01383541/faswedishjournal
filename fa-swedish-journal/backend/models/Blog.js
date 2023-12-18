@@ -1,6 +1,7 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-
-const mongoose = require('mongoose');
+import express from 'express';
+import mongoose from 'mongoose';
 
 const blogSchema = new mongoose.Schema({
   title: String,
@@ -10,4 +11,4 @@ const blogSchema = new mongoose.Schema({
 
 const Blog = mongoose.model('Blog', blogSchema);
 
-module.exports = Blog;
+export default Blog

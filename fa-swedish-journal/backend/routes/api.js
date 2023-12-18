@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-const express = require('express');
+import express from 'express';
+import Blog from '../models/Blog.js';
 const router = express.Router();
-const Blog = require('../models/Blog');
 
 router.get('/blogs',async(req,res)=>{
     try{
@@ -13,4 +13,4 @@ router.get('/blogs',async(req,res)=>{
     }
 });
 
-module.exports = router;
+export {router}

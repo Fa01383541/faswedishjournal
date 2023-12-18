@@ -1,9 +1,10 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-const express = require('express');
-const mongoose = require('mongoose');
-const db = require('./db');
-const apiRoutes = require('./routes/api');
+import express from 'express';
+import mongoose from 'mongoose';
+import {db} from './db.js';
+import {router as apiRoutes} from './routes/api.js';
+import Blog from './models/Blog.js'
 
 const app = express();
 
