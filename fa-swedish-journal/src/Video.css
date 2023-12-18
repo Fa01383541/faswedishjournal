@@ -26,8 +26,8 @@
 }
 .videogrid{
     display:grid;
-    grid-template-columns: repeat(2,5fr);
-    gap: 5rem;
+    grid-template-columns: repeat(4,49%);
+    gap: 0.5rem;
 }
 
 .longvideos, .shortvideos{
