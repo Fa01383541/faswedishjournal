@@ -2,23 +2,18 @@
 /* eslint-disable no-undef */
 import express from 'express';
 import mongoose from 'mongoose';
+import cors from 'cors';
 import {db} from './db.js';
 import {router as apiRoutes} from './routes/api.js';
 import Blog from './models/Blog.js'
 
 const app = express();
 
-const nuevoBlog = new Blog({
-  title: 'Mi primer blog',
-  content: 'Contenido del blog...',
-});
-
-nuevoBlog.save((err, blogGuardado) => {
-  if (err) return console.error(err);
-  console.log('Blog guardado:', blogGuardado);
-});
+app.use(cors({origin: 'http://localhost:5173'}));
 
 app.use('/api',apiRoutes);
+
+app.use(express.json());
 
 const PORT = process.env.PORT || 3001;
 

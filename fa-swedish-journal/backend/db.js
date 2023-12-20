@@ -1,13 +1,10 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
+import 'dotenv/config.js';
 import express from 'express';
 import mongoose from 'mongoose';
 
-mongoose.connect(process.env.MONGODB_URI,{
-    useNewUrlParser:true,
-    useUnifiedTopology:true,
-    useCreateIndex:true,
-});
+mongoose.connect(process.env.MONGODB_URI);
 
 const db = mongoose.connection;
 

@@ -17,7 +17,7 @@ function App() {
         <div>Cargando...</div>
       }>
         <Routes>
-          <Route path= "/home" element ={<Home/>}/>
+          <Route path= "/" element ={<Home/>}/>
           <Route path= "/blog" element ={<Blog/>}/>
           <Route path= "/video" element ={<Video/>}/>
           <Route path= "/currency-exchange" element ={<CurrencyEx/>}/>
