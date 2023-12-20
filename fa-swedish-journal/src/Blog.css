@@ -1,4 +1,39 @@
 .title{
     text-align: center;
     color:#fff;
+    font-size:2em;
+    margin-bottom: 1em;
+}
+
+.blog-post{
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding:1em;
+    margin-bottom: 1em;
+}
+
+.blog-post h3{
+    font-size:1.5em;
+    color:#333;
+    margin-bottom:0.5em;
+}
+.blog-post p{
+    color:#666;
+    line-height: 1.6;
+}
+
+.blog-post a{
+    display: inline-block;
+    color:#fff;
+    background-color: #007bff;
+    padding: 0.5em 1em;
+    margin-top: 1em;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.blog-post a:hover{
+    background-color: #0056b3;
 }
