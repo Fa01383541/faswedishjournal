@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React , {useState} from 'react';
 import axios from 'axios';
+import '../Blog.css';
 
 function BlogForm(){
     const [title,setTitle]=useState('');
